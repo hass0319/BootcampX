@@ -6,15 +6,7 @@
 -- end_date: The date that the teacher stopped working.
 -- is_active: If the teacher is actively teaching right now.
 -- SELECT (id, name ) FROM teachers;
-
-CREATE TABLE teachers (
-  id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(255) NOT NULL,
-  is_active BOOLEAN DEFAULT TRUE,
-  start_date DATE,
-  end_date DATE
-);
-
+-- ------------------------------------------------------------
 -- An assistance_request will have the following attributes:
 
 -- id: A unique identifier
@@ -28,6 +20,14 @@ CREATE TABLE teachers (
 -- teacher_feedback: Feedback about the teacher given by the student
 -- A student can create many assistance_requests and a teacher can respond to many assistance_requests.
 
+
+CREATE TABLE teachers (
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  is_active BOOLEAN DEFAULT TRUE,
+  start_date DATE,
+  end_date DATE
+);
 
 CREATE TABLE assistance_requests (
   id SERIAL PRIMARY KEY NOT NULL,
